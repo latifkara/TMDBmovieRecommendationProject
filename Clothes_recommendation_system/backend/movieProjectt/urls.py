@@ -1,8 +1,10 @@
 from django.urls import path
-from . import views
+from movieProject import views
 
 urlpatterns = [
-    path('', views.RecommendationView),
-    path('counter', views.counter, name='counter')
+    path("movies/", views.MovieView.as_view(), name="movie-list"),
+    # path("movieProjectt/", include("movieProjectt.urls")),
+
+
 ]
 
